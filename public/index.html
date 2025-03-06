@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodemailer</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        input{
+            margin-bottom: 5px;
+        }
+        input[type='submit']{
+            background:blue;
+            color:white;
+            cursor:pointer;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+        input[type='submit']:hover{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <h2>CONTACT</h2>
+            <input type="text" id='name' placeholder="Full Name"><br/>           
+            <input type="email" id='email' placeholder="Email"><br/>           
+            <input type="text" id='subject' placeholder="Subject"><br/>
+            <textarea id="message" placeholder='Message' cols="30" rows="7"></textarea><br/>           
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+    <script>
+        const contactForm = document.querySelector('form')
+        contactForm.addEventListener('submit',(e)=>{
+            e.preventDefault()
+
+        })
+    </script>
+</body>
+</html>
